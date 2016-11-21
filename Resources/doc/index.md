@@ -41,6 +41,12 @@ hshn_angular:
     assetic: ~
 ```
 
+```yaml
+# app/config/parametters.yml
+parameters:
+    assetic.asset_factory.class: Hshn\AngularBundle\Factory\AssetFactory
+```
+
 ### Using AngularTemplateCache
 
 In Twig:
