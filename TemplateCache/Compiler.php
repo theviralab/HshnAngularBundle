@@ -14,7 +14,9 @@ class Compiler
      * @return string
      */
     public function compile(array $files, $moduleName, $newModule = false)
-    {
+    {        
+        $moduleName = str_replace('_', '.', $moduleName);
+
         $output = "'use strict';\n\n";
         $output .= $newModule ? "angular.module('{$moduleName}', [])\n" : "angular.module('{$moduleName}')\n";
         $output .= "  .run(['\$templateCache', function (\$templateCache) {\n";
